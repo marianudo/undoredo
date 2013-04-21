@@ -1,15 +1,15 @@
 package me.marianonavas.undoredo.command;
 
 public class UndoableSampleCommand implements Command {
-	private final DefaultCommandTarget migration;
+	private final DefaultCommandTarget target;
 
-	public UndoableSampleCommand(DefaultCommandTarget migration) {
-		this.migration = migration;
+	public UndoableSampleCommand(DefaultCommandTarget target) {
+		this.target = target;
 	}
 
 	@Override
 	public void doIt() {
-		migration.doForward();
+		target.doForward();
 	}
 
 	@Override
@@ -19,7 +19,7 @@ public class UndoableSampleCommand implements Command {
 
 	@Override
 	public void undoIt() {
-		migration.doBackward();
+		target.doBackward();
 	}
 
 }
