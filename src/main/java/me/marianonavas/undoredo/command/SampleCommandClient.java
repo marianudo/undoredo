@@ -6,7 +6,6 @@ public class SampleCommandClient {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// First let's migrate the account pp@gmail.com
 		String initialState = "First";
 		String finalState = "Second";
 		DefaultCommandTarget migration = new DefaultCommandTarget(initialState, finalState);
